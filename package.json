@@ -1,0 +1,16 @@
+{
+    "name": "Team_Profile_Generator",
+    "version": "1.0",
+    "description": "Module 10",
+    "author": "Maya McKinney",
+    "license": "ISC",
+    "scripts": {
+        "test": "jest --verbose test/*"
+    },
+    "dependencies": {
+        "inquirer": "^9.1.4"
+    },
+    "devDependencies": {
+        "jest": "^29.4.1"
+    }
+}
