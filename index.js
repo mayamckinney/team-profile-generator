@@ -6,12 +6,14 @@ const path = require("path");
 const fs = require("fs");
 const dirOutput = path.resolve(__dirname, "dist");
 const dirPath = path.join(dirOutput, "team.html");
-const generateTeam = require("./src/helper");
+const generateTeam = require("./src/generate-team");
 
 team = [];
 
 const init = () => {
-    inquirer.prompt([{
+    teamBuilder = () =>
+    {    
+        inquirer.prompt([{
         type: "list",
         message: "What kind of employee do you want to add to the team?",
         name: "addEmployee",
@@ -121,5 +123,15 @@ addManager = () => {
         init();
     });
 };
+
+htmlBuilder = () => {
+    console.log("The team has been built. The page will now generate.");
+
+    fs.writeFileSync(dirPath, generateTeam(team), 'utf-8');
+}
+
+teamBuilder();
+
+}
 
 init();
