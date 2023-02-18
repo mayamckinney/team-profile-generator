@@ -68,6 +68,58 @@ const addIntern = () => {
     inquirer.prompt([
         {
             type: "input",
+            name: "internName",
+            message: "What is the intern's name?"
+        },
+        {
+            type: "input",
+            name: "internId",
+            message: "What is their employee ID number?"
+        },
+        {
+            type: "input",
+            name: "internEmail",
+            message: "What is their email address?"
+        },
+        {
+            type: "input",
+            name: "internSchool",
+            message: "What is the name of the school they went to?"
         }
-    ])
-}
+    ]) .then(answers => {
+        const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+        team.push(intern);
+        init();
+    });
+};
+
+addManager = () => {
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "managerName",
+            message: "What is the manager's name?"
+        },
+        {
+            type: "input",
+            name: "managerId",
+            message: "What is their employee ID number?"
+        },
+        {
+            type: "input",
+            name: "managerEmail",
+            message: "What is their email address?"
+        },
+        {
+            type: "input",
+            name: "managerOffice",
+            message: "What is their office number?"
+        }
+    ]).then(answers => {
+        const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOffice);
+        team.push(manager);
+        init();
+    });
+};
+
+init();
