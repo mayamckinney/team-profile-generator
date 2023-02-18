@@ -7,6 +7,7 @@ const fs = require("fs");
 const dirOutput = path.resolve(__dirname, "dist");
 const dirPath = path.join(dirOutput, "team.html");
 const generateTeam = require("./src/generate-team");
+const inquirer = require("inquirer");
 
 team = [];
 
@@ -60,7 +61,7 @@ const addEngineer = () => {
         }
     ])
     .then(answers => {
-        const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answer.engineerGithub);
+        const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
         team.push(engineer);
         init();
     });
