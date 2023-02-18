@@ -1,7 +1,7 @@
 # Team Profile Generator
 
 ## Walkthrough Video
-In order to demonstrate how to use this application, you can view a video of me demonstrating the application here.
+In order to demonstrate how to use this application, you can view a video of me demonstrating the application [here](https://drive.google.com/file/d/1WoRb4EcrBH-bpRWTM1i9mvjO4OuK1HSw/view).
 
 ## User Story
 
